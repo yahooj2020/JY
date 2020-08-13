@@ -70,7 +70,7 @@ if __name__ == "__main__":
     for num in range(1,341):
 
         url = 'https://www.r18.com/videos/vod/movies/actress/letter=a/sort=popular/page={0}/'.format(num)
-        lpath  =os.getcwd()
+        lpath  ="/root/JY/s18/get_pic"
         html =get_one_page(url)
         parse_html(html)
         print(url)

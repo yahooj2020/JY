@@ -62,10 +62,11 @@ def parse_html(html):
     print(fpic_path)
     print(links)
     for i1,i2 in zip(v_name,links):
-        urllib.request.urlretrieve(i2, '{0}/{1}.mp4'.format(fpic_path,i1))
- 
+        f_name = "".join(i1.split())
+        urllib.request.urlretrieve(i2, '{0}/{1}.mp4'.format(fpic_path,f_name[:20]))
+        # Fname = fpic_path+"/"+"".join(i1.split())
 
-        # cmd = 'wget -P {0} {1}'.format(fpic_path, one_url)
+        # cmd = 'wget -P {0} {1}.mp4'.format(Fname, i2)
         # subprocess.call(cmd, shell=True)
 
         # print(cmd)
